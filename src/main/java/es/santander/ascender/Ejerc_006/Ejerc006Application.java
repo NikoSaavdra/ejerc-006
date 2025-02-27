@@ -1,4 +1,4 @@
-package es.santander.ascender.Ejerc_006;
+package es.santander.ascender.ejerc_006;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
