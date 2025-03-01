@@ -1,4 +1,4 @@
-package es.santander.ascender.Ejerc_006.Repository;
+package es.santander.ascender.ejerc_006.Repository;
 
 import java.util.Optional;
 

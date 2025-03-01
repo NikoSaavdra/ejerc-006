@@ -2,6 +2,7 @@ package es.santander.ascender.ejerc_006.Model;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -33,8 +34,9 @@ public class Edificio {
     @Column(name = "codigo_postal")
     private int codigoPostal;
 
-    @OneToMany(mappedBy = "edificio")
+    @OneToMany(mappedBy = "edificio", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Aula> aulas;  // Relación con Aula
+
 
     public Long getId() {
         return id;

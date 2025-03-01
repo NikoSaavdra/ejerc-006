@@ -2,6 +2,7 @@ package es.santander.ascender.ejerc_006.Model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -29,8 +30,9 @@ public class Silla {
     @Column(name = "material_dos")
     private String materialDos;
 
-    @ManyToOne
-    @JoinColumn(name = "aula_id", nullable = false)
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "aula_id")
     private Aula aula;  // Relación con Aula
 
     public Long getId() {
